@@ -8,6 +8,7 @@ import HomeStack from './pages/home';
 import SettingsStack from './pages/settings';
 import ScanNFCStack from './pages/scanNFC';
 import AddNFCStack from './pages/addNFC';
+import LoginScreen from './pages/login';
 
 const tabNavigator = createBottomTabNavigator({
     "Inicio": HomeStack,
@@ -38,6 +39,10 @@ const tabNavigator = createBottomTabNavigator({
 tabNavigator.path = '';
 
 const AppNavigator = createStackNavigator({
+    Login: {
+        screen: LoginScreen,
+        navigationOptions: { header: null }
+    },
     Home: {
         screen: tabNavigator,
         navigationOptions: { header: null }
